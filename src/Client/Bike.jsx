@@ -1,148 +1,127 @@
-import React, { useState } from "react";
-
+import React from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import Card from "../Components/Card";
 import Bikelist from "../Components/BikeCo";
 
 function Bike() {
+  return (
+    <>
+      <Header />
 
+      {/* Hero Section */}
+      <div
+        className="relative w-full h-64 bg-cover bg-center flex items-center justify-center"
+        style={{ backgroundImage: "url('/IMG/IMG/list.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative text-center text-white">
+          <h1 className="text-3xl md:text-4xl font-bold">Find Your Bike</h1>
+          <p className="text-sm mt-2">
+            <a href="/" className="text-gray-300 hover:underline">Home</a> &gt; Find Your Bike
+          </p>
+        </div>
+      </div>
 
-    return (
+      {/* Main Content */}
+      <div className="p-6 md:p-16">
+        <div className="container mx-auto w-11/12 md:w-4/5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-        <>
-            <Header></Header>
-            {/* Hero Section with Background Image */}
-            <div className="relative w-full h-64 bg-cover bg-center"
-                style={{ backgroundImage: "url(./public/IMG/IMG/list.jpg)" }}>
-                <div className="absolute inset-0 bg-black opacity-50"></div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                    <h1 className="text-4xl font-bold">About Us</h1>
-                    <p className="text-sm mt-2">
-                        <a href="/" className="text-gray-300 hover:underline">Home</a> &gt; About Us
-                    </p>
+            {/* Sidebar Filter */}
+            <div className="border-2 h-64 border-gray-300 p-5 rounded-md shadow-md">
+              <h5 className="text-xl font-bold mb-4 flex items-center">
+                <i className="fa fa-filter text-blue-500 mr-2"></i> Find Your Bike
+              </h5>
+
+              <form>
+                {/* Select Brand */}
+                <div className="mb-4">
+                  <select className="w-full p-2 border rounded-md bg-gray-200">
+                    <option>Select Brand</option>
+                    <option value="1">Heros</option>
+                    <option value="2">Honda</option>
+                    <option value="3">Mahindra</option>
+                    <option value="4">TVS</option>
+                    <option value="5">Suzuki</option>
+                    <option value="7">Bajaj</option>
+                    <option value="8">Yamaha</option>
+                    <option value="9">Royal Enfield</option>
+                    <option value="10">KTM</option>
+                    <option value="14">BMW</option>
+                  </select>
                 </div>
-            </div>
-            {/*  */}
 
-            <div className="p-20">
-                <div className="container w-4/5 mx-auto px-3">
-                    <div className="grid grid-cols-3">
-                        <div className="col-span-1 text-center">
-                            <div class="sidebar_widget border-2 border-[#e6e6e6] mb-10 p-5">
-                                <div class="widget_heading text-xl font-bold">
-                                    <h5 className="text-xl"><i class="fa fa-filter text-[#228dcb]" aria-hidden="true"></i> Find Your Bike </h5>
-                                </div>
-                                <div class="sidebar_filter">
-                                    <form action="search-carresult.php" method="post">
-                                        <div class="form-group select mb-4">
-                                            <select class="form-control w-64 mt-5 p-2 bg-[#e6e6e6]" name="brand" fdprocessedid="cdcb7g">
-                                                <option>Select Brand</option>
-
-
-                                                <option value="1">Heros</option>
-
-                                                <option value="2">Honda</option>
-
-                                                <option value="3">Mahindra</option>
-
-                                                <option value="4">TVS</option>
-
-                                                <option value="5">Suzuki</option>
-
-                                                <option value="7">Bajaj</option>
-
-                                                <option value="8">Yamahas</option>
-
-                                                <option value="9">Royal Enfield</option>
-
-                                                <option value="10">KTM</option>
-
-                                                <option value="14">BMW</option>
-
-                                            </select>
-                                        </div>
-                                        <div class="form-group select">
-                                            <select class="form-control w-64 mt-5 p-2 bg-[#e6e6e6]">
-                                                <option>Select Fuel Type</option>
-                                                <option value="Petrol">Petrol</option>
-                                                <option value="Diesel">Diesel</option>
-                                                <option value="CNG">CNG</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="form-group mt-5">
-                                            <button type="submit" class="btn btn-block w-64  p-2 bg-[#228dcb] text-center text-white" ><i class="fa fa-search"></i> Search Bike </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-span-2">
-                            {/*  */}
-                            <Bikelist img="./public/IMG/IMG/glamour-programmed-fi-24.jpg"
-                                Name="Heros , Hero Glamour"
-                                Price="₹350  "
-                                Model="2018" >
-                            </Bikelist>
-                            
-                            <Bikelist img="./public/IMG/IMG/honda-cb.png"
-                                Name="Honda , CB Shine"
-                                Price="₹550  "
-                                Model="2019" >
-                            </Bikelist>
-                            
-                            <Bikelist img="./public/IMG/IMG/mahindra.jpg"
-                                Name="Mahindra Centura"
-                                Price="₹500  "
-                                Model="2017" >
-                            </Bikelist>
-                            
-                            <Bikelist img="./public/IMG/IMG/royal-enfield-bullet-500-1464785917.png"
-                                Name="Hero Glamour"
-                                Price="₹350  "
-                                Model="2018" >
-                            </Bikelist>
-                            
-                           
-                            {/*  */}
-                        </div>
-                    </div>
+                {/* Select Fuel Type */}
+                <div className="mb-4">
+                  <select className="w-full p-2 border rounded-md bg-gray-200">
+                    <option>Select Fuel Type</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="CNG">CNG</option>
+                  </select>
                 </div>
-            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/* Floating Buttons */}
-            <div className="fixed bottom-5 right-5 flex flex-col space-y-4">
-
-                {/* Scroll to Top Button */}
-                <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                    className="bg-blue-500 rounded-full shadow-lg h-12 w-12">
-                    <span className="text-white text-xl"><i class="fa fa-angle-up text-white" aria-hidden="true"></i></span>
+                {/* Search Button */}
+                <button
+                  type="submit"
+                  className="w-full p-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
+                >
+                  <i className="fa fa-search mr-2"></i> Search Bike
                 </button>
+              </form>
             </div>
-            <Footer></Footer>
-        </>
-    );
-};
+
+            {/* Bike Listings */}
+            <div className="md:col-span-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1  gap-6">
+                
+                <Bikelist 
+                  img="/IMG/IMG/glamour-programmed-fi-24.jpg"
+                  Name="Heros , Hero Glamour"
+                  Price="₹350"
+                  Model="2018" 
+                />
+
+                <Bikelist 
+                  img="/IMG/IMG/honda-cb.png"
+                  Name="Honda , CB Shine"
+                  Price="₹550"
+                  Model="2019" 
+                />
+
+                <Bikelist 
+                  img="/IMG/IMG/mahindra.jpg"
+                  Name="Mahindra Centura"
+                  Price="₹500"
+                  Model="2017" 
+                />
+
+                <Bikelist 
+                  img="/IMG/IMG/royal-enfield-bullet-500-1464785917.png"
+                  Name="Royal Enfield Bullet 500"
+                  Price="₹350"
+                  Model="2018" 
+                />
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating Scroll Button */}
+      <div className="fixed bottom-5 right-5">
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="bg-blue-500 text-white rounded-full shadow-lg h-12 w-12 flex items-center justify-center hover:bg-blue-600 transition"
+        >
+          <i className="fa fa-angle-up"></i>
+        </button>
+      </div>
+
+      <Footer />
+    </>
+  );
+}
 
 export default Bike;

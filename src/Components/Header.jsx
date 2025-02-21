@@ -1,4 +1,8 @@
-function Header() {
+import { useState } from "react";
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <>
       {/* <!-- header start --> */}
@@ -6,7 +10,7 @@ function Header() {
         <div className="container w-11/12 md:w-4/5 mx-auto px-3">
           <div className="flex flex-wrap justify-between items-center">
             <div className="logo">
-              <img src="./public/IMG/IMG/download.png" alt="Logo" className="w-24 md:w-32" />
+              <img src="/IMG/IMG/download.png" alt="Logo" className="w-24 md:w-32" />
             </div>
             <div className="contacts hidden md:flex">
               <div className="header-info flex flex-wrap justify-between items-center">
@@ -38,14 +42,21 @@ function Header() {
           </div>
         </div>
       </header>
+      
       {/* <!-- navbar start --> */}
       <nav>
         <div className="bg-black text-white py-4 text-sm">
           <div className="container w-11/12 md:w-4/5 flex flex-wrap items-center justify-between">
-            <button className="md:hidden text-white text-2xl focus:outline-none" id="menu-toggle">
+            {/* Toggle Button for Mobile Menu */}
+            <button 
+              className="md:hidden text-white text-2xl focus:outline-none" 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
               <i className="fa fa-bars"></i>
             </button>
-            <div className="menus w-full md:w-auto hidden md:flex" id="menu">
+
+            {/* Navigation Menu */}
+            <div className={`menus w-full md:w-auto ${isMenuOpen ? "block" : "hidden"} md:flex`}>
               <ul className="uppercase font-bold flex flex-col md:flex-row text-center">
                 <li className="px-4 py-2 md:px-6 aniBor cursor-pointer"><a href="/">Home</a></li>
                 <li className="px-4 py-2 md:px-6 aniBor cursor-pointer"><a href="/AboutUs">About Us</a></li>
@@ -54,25 +65,20 @@ function Header() {
                 <li className="px-4 py-2 md:px-6 aniBor cursor-pointer"><a href="/Contact">Contact Us</a></li>
               </ul>
             </div>
-            <div className="search border border-gray-400 rounded-lg mt-2 md:mt-0">
-              <div className="icon p-2 w-16 text-center">
-                <i className="fa fa-user-circle mr-1" aria-hidden="true"></i>
-                <i className="fa fa-angle-down" aria-hidden="true"></i>
+
+            {/* Search/User Icon */}
+            <div className="search ml-[40%] border border-gray-400 rounded-lg mt-2 md:mt-0">
+              <div className="icon  p-2 w-16 text-center">
+                <i className="fa fa-user-circle mr-1"></i>
+                <i className="fa fa-angle-down"></i>
               </div>
             </div>
           </div>
         </div>
       </nav>
-      <script>
-        {`
-          document.getElementById('menu-toggle').addEventListener('click', function() {
-            document.getElementById('menu').classList.toggle('hidden');
-          });
-        `}
-      </script>
       {/* <!-- navbar end --> */}
     </>
   );
-}
+};
 
 export default Header;
