@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply mx-auto px-4;
+  }
+
+  .aniBor:hover hr {
+    @apply opacity-100 w-full
+  }
+
+  .hrstyle {
+    @apply border-white border-[1.5px] opacity-0 w-0 duration-500
+  }
+
+
+}
