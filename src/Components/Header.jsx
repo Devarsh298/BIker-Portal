@@ -42,14 +42,14 @@ const Header = () => {
           </div>
         </div>
       </header>
-      
+
       {/* <!-- navbar start --> */}
       <nav>
         <div className="bg-black text-white py-4 text-sm">
           <div className="container w-11/12 md:w-4/5 flex flex-wrap items-center justify-between">
             {/* Toggle Button for Mobile Menu */}
-            <button 
-              className="md:hidden text-white text-2xl focus:outline-none" 
+            <button
+              className="md:hidden text-white text-2xl focus:outline-none"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <i className="fa fa-bars"></i>
