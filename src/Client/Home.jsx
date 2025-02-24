@@ -36,21 +36,42 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
             <Card img="/IMG/IMG/glamour-programmed-fi-24.jpg"
               Name="Hero Glamour"
-              Price="$350"
+              Price="₹400"
               Discription="A two-wheeler major's mid-sized commuter fighter, the Hero MotoCorp Gl"
               Model="2018" />
 
             <Card img="/IMG/IMG/honda-cb.png"
               Name="Honda CB Shine"
-              Price="$320"
+              Price="₹360"
               Discription="Honda has launched the 2018 CB Shine in the Indian market with a price"
               Model="2019" />
 
             <Card img="/IMG/IMG/mahindra.jpg"
               Name=" Mahindra Centura "
-              Price="$280"
+              Price="₹450"
               Discription="As per ARAI, the mileage of Q8 is 0 kmpl. Real mileage of the vehicle "
               Model="2017" />
+               <Card
+                  img="/IMG/IMG/apache-160-right-front-three-quarter-2.webp"
+                  Name="TVS Apache RTR 160"
+                  Price="₹400"
+                  Discription="TVS Apache RTR 160 is a street bike available at a starting price of R"
+                  Model="2019" 
+                />
+               <Card
+                  img="/IMG/IMG/gixxer-250-right-front-three-quarter-2.webp"
+                  Name="Suzuki Gixxer 250"
+                  Price="₹500"
+                  Discription="Suzuki Gixxer 250 is a street bike available at a starting price of Rs"
+                  Model="2019" 
+                />
+               <Card
+                  img="/IMG/IMG/royal-enfield-bullet-500-1464785917.png"
+                  Name="Royal Enfield Bullet 500"
+                  Price="₹900"
+                  Discription="Royal Enfield Bullet 500 is the oldest icon that has been in continues"
+                  Model="2015" 
+                />
           </div>
         </div>
       </section>
@@ -61,26 +82,26 @@ function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             
             {/* Fact 1 */}
-            <div className="bg-blue-500 text-white rounded-full w-40 h-40 flex flex-col items-center justify-center mx-auto">
-              <h2 className="text-3xl font-bold"><i className="fa fa-calendar"></i><br />40+</h2>
+            <div className="bg-blue-500 text-white rounded-full  w-40 h-40 flex flex-col items-center justify-center mx-auto">
+              <h2 className="text-2xl font-bold"><i className="fa fa-calendar"></i><br />40+</h2>
               <p>Years In Business</p>
             </div>
 
             {/* Fact 2 */}
             <div className="bg-blue-500 text-white rounded-full w-40 h-40 flex flex-col items-center justify-center mx-auto">
-              <h2 className="text-3xl font-bold"><i className="fa fa-motorcycle"></i><br />1200+</h2>
+              <h2 className="text-2xl font-bold"><i className="fa fa-motorcycle"></i><br />1200+</h2>
               <p>New Bikes For Sale</p>
             </div>
 
             {/* Fact 3 */}
             <div className="bg-blue-500 text-white rounded-full w-40 h-40 flex flex-col items-center justify-center mx-auto">
-              <h2 className="text-3xl font-bold"><i className="fa fa-motorcycle"></i><br />400+</h2>
+              <h2 className="text-2xl font-bold"><i className="fa fa-motorcycle"></i><br />400+</h2>
               <p>Used Bikes For Sale</p>
             </div>
 
             {/* Fact 4 */}
             <div className="bg-blue-500 text-white rounded-full w-40 h-40 flex flex-col items-center justify-center mx-auto">
-              <h2 className="text-3xl font-bold"><i className="fa fa-user"></i><br />6000+</h2>
+              <h2 className="text-2xl font-bold"><i className="fa fa-user"></i><br />6000+</h2>
               <p>Satisfied Customers</p>
             </div>
 

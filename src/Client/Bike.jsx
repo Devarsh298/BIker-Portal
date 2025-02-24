@@ -102,6 +102,7 @@ function Bike() {
                   Price="₹350"
                   Model="2018" 
                 />
+               
 
               </div>
             </div>

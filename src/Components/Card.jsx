@@ -12,7 +12,7 @@ function Card({img,Name,Price,Discription,Model})
             </ul>
           </div>
           <div className="car-title-m  flex justify-between p-5 bg-white">
-            <h6><a href="" className="block text-lg font-bold">{Name}</a></h6>
+            <h6><a href="" className="block text-lg font-bold hover:text-[#228DCB] duration-500">{Name}</a></h6>
             <span className="price font-bold">{Price}</span>
           </div>
           <div className="inventory_info_m p-5 bg-white pt-0 text-[#9e9e9e]">

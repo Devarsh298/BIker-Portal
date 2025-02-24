@@ -1,7 +1,7 @@
 function Bikelist({ img, Name, Price, Model }) {
     return (
         <>
-            <div className="bg-gray-100 rounded-lg shadow-md p-4 flex ml-14 mb-5">
+            <div className="bg-gray-100 rounded-lg shadow-md p-4 lg:ml-14 lg:flex mb-5">
                 <img src={`${img}`} alt="Bike"
                     className="  rounded mr-4 object-cover w-1/2" />
                 <div>

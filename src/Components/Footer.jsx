@@ -8,11 +8,11 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-3">ABOUT US</h3>
           <ul className="space-y-2 text-gray-400">
-            <li><a href="#" className="hover:text-white">About Us</a></li>
-            <li><a href="#" className="hover:text-white">FAQs</a></li>
+            <li><a href="/AboutUs" className="hover:text-white">About Us</a></li>
+            <li><a href="/Faq" className="hover:text-white">FAQs</a></li>
             <li><a href="#" className="hover:text-white">Privacy</a></li>
             <li><a href="#" className="hover:text-white">Terms of use</a></li>
-            <li><a href="#" className="hover:text-white">Admin Login</a></li>
+            <li><a href="/Admin" className="hover:text-white">Admin Login</a></li>
           </ul>
         </div>
 
