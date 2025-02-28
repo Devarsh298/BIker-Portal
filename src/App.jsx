@@ -23,6 +23,7 @@ function App() {
         <Route path='/Contact' element={<Contact></Contact>}></Route>
         <Route path='/Bike' element={<Bike></Bike>}></Route>
         <Route path='/HeroGlamour' element={<HeroGlamour></HeroGlamour>}></Route>
+        <Route path = '/login' element = {<Login></Login>}</Route>
 
         
       </Routes>
